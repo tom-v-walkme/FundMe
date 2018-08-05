@@ -25,7 +25,8 @@ class MakeDonation extends Component {
             socialId: this.refs.socialId.value,
             payment: this.state.amount,
             fundEventId: this.props.fundEvent._id,
-            type: this.state.donateType
+            type: this.state.donateType,
+            date: Date.now()
         };
 
         if (payment.paid) {
