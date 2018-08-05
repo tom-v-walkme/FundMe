@@ -15,7 +15,7 @@ class FundEvent extends Component {
     }
 
     render() {
-        if (this.props.fundEvent) {
+        if (this.props.fundEvent && this.props.donations) {
             return (
                 <div>
                     <FundEventHeader/>
