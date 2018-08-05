@@ -22,9 +22,12 @@ export default class FundEventBar extends Component {
 
     render() {
         return (
-            <div className="total-donation-bar">
-                <div id="total-repeating-donations"></div>
-                <div id="total-single-donations"></div>
+            <div className="donation-bar-wrapper">
+                <div className="total-donation-bar">
+                    <div id="total-repeating-donations"></div>
+                    <div id="total-single-donations"></div>
+                </div>
+                <img src="/images/ProgressJar2.png" className="progress-jar" />
             </div>
         );
     }

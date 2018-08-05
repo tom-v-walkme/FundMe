@@ -21,21 +21,12 @@ class FundEvent extends Component {
                 <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
+
                                 <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
-                            </td>
-                            <td>
+
                                 <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
                 <br/>
                 <FundEventGeneralText fundEvent={this.props.fundEvent}/>
-
                 <br/>
                 <br/>
                 <FundEventDonate fundEvent={this.props.fundEvent}/>

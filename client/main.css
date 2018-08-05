@@ -14,7 +14,8 @@ body {
   font-family: 'Alef';
   text-align: right;
   direction: rtl;
-  background: url('images/WoodBG2.png');
+  background-image: url('images/bright.jpg');
+  background-size: 100% 100%;
 }
 
 .fundme-logo {
@@ -26,7 +27,6 @@ form {
   width: 860px;
   padding: 30px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.4);
 }
 
 h3 {
