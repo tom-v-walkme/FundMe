@@ -20,8 +20,6 @@ export default class FundEventBar extends Component {
         let totalRepeatingDonations = this.props.donations.filter((d) => d.type == "monthly").reduce((a, c) => a + c.payment, 0);
         let totalSingleDonations = this.props.donations.filter((d) => d.type == "single").reduce((a, c) => a + c.payment, 0);
 
-        console.log("a", totalRepeatingDonations, totalSingleDonations);
-
         var RepeatingDonationsPercent =  100 * totalRepeatingDonations / totalDonation;
         var singleDonationsPercent =  100 * totalSingleDonations / totalDonation;
 
