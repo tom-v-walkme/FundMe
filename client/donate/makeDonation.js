@@ -11,7 +11,8 @@ class MakeDonation extends Component {
 
         this.state = {
             amount: 0,
-            donateType: "monthly"
+            donateType: "monthly",
+            otherAmount: false
         };
     }
 
@@ -49,16 +50,17 @@ class MakeDonation extends Component {
                     <br/>
                 </div>
                 <div className="donate-type">
-                    <div id="monthly-donate" onClick={() => this.setState({donateType: "monthly"})}>תרומה חודשית</div>
-                    <div id="single-donate" onClick={() => this.setState({donateType: "single"})}>תרומה חד-פעמית</div>
+                    <div id="monthly-donate" className="btn btn-primary" onClick={() => this.setState({donateType: "monthly"})}>תרומה חודשית</div>
+                    <div id="single-donate" className="btn btn-primary" onClick={() => this.setState({donateType: "single"})}>תרומה חד-פעמית</div>
                 </div>
                 <div className="amount-details">
-                    <div id="payment-25" onClick={() => this.setState({amount: 25})}>25 ש"ח</div>
-                    <div id="payment-50" onClick={() => this.setState({amount: 50})}>50 ש"ח</div>
-                    <div id="payment-100" onClick={() => this.setState({amount: 100})}>100 ש"ח</div>
-                    <div id="payment-200" onClick={() => this.setState({amount: 200})}>200 ש"ח</div>
-                    <div id="payment-other">אחר
-                        <input type="number" id="other-amount" value={this.state.amount} onChange={(e) => this.setState({amount: e.target.amount})}></input>
+                    <div id="payment-25" className="btn btn-primary" onClick={() => this.setState({amount: 25, otherAmount: false})}>25 ש"ח</div>
+                    <div id="payment-50" className="btn btn-primary" onClick={() => this.setState({amount: 50, otherAmount: false})}>50 ש"ח</div>
+                    <div id="payment-100" className="btn btn-primary" onClick={() => this.setState({amount: 100, otherAmount: false})}>100 ש"ח</div>
+                    <div id="payment-200" className="btn btn-primary" onClick={() => this.setState({amount: 200, otherAmount: false})}>200 ש"ח</div>
+                    <div>
+                        <span id="payment-other" className="btn btn-primary" onClick={() => this.setState({otherAmount: true})}>אחר</span>
+                        {this.state.otherAmount ? <input type="number" id="other-amount" value={this.state.amount} onChange={(e) => this.setState({amount: e.target.value})}></input> : ""}
                     </div>
                 </div>
                 <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
