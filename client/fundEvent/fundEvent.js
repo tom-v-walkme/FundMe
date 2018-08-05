@@ -5,6 +5,7 @@ import FundEventHeader from "./fundEventHeader";
 import FundEventBar from "./fundEventBar";
 import FundEventImage from "./funcEventImage";
 import FundEventGeneralText from "./fundEventGeneralText";
+import FundEventDonate from "./fundEventDonate";
 
 class FundEvent extends Component {
     fundEvent;
@@ -36,6 +37,7 @@ class FundEvent extends Component {
                 <br/>
                 <br/>
                 <p>{this.props.fundEvent && this.props.fundEvent.name}</p>
+                <FundEventDonate/>
             </div>
         );
     }
