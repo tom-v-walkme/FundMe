@@ -8,7 +8,7 @@ export default class FundEventDonate extends Component {
     render() {
         return (
             <div>
-                <button type="button" className="btn btn-primary">Make Donation</button>
+                <button type="button" className="btn btn-primary">תרמו לנו</button>
             </div>
         );
     }
