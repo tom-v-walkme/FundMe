@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FundEvents, Donations} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
 import {PayPalCheckout} from './payPalCheckout';
+import './makeDonation.css';
 import {parse} from "query-string";
 
 class MakeDonation extends Component {
@@ -50,16 +51,16 @@ class MakeDonation extends Component {
                     <br/>
                 </div>
                 <div className="donate-type">
-                    <div id="monthly-donate" className="btn btn-primary" onClick={() => this.setState({donateType: "monthly"})}>תרומה חודשית</div>
-                    <div id="single-donate" className="btn btn-primary" onClick={() => this.setState({donateType: "single"})}>תרומה חד-פעמית</div>
+                    <div id="monthly-donate" className={"btn btn-primary" + (this.state.donateType == "monthly" ? " chosen" : "")} onClick={() => this.setState({donateType: "monthly"})}>תרומה חודשית</div>
+                    <div id="single-donate" className={"btn btn-primary" + (this.state.donateType == "single" ? " chosen" : "")} onClick={() => this.setState({donateType: "single"})}>תרומה חד-פעמית</div>
                 </div>
                 <div className="amount-details">
-                    <div id="payment-25" className="btn btn-primary" onClick={() => this.setState({amount: 25, otherAmount: false})}>25 ש"ח</div>
-                    <div id="payment-50" className="btn btn-primary" onClick={() => this.setState({amount: 50, otherAmount: false})}>50 ש"ח</div>
-                    <div id="payment-100" className="btn btn-primary" onClick={() => this.setState({amount: 100, otherAmount: false})}>100 ש"ח</div>
-                    <div id="payment-200" className="btn btn-primary" onClick={() => this.setState({amount: 200, otherAmount: false})}>200 ש"ח</div>
+                    <div id="payment-25" className={"btn btn-primary" + (this.state.amount == 25 && this.state.otherAmount == false ? " chosen" : "")} onClick={() => this.setState({amount: 25, otherAmount: false})}>25 ש"ח</div>
+                    <div id="payment-50" className={"btn btn-primary" + (this.state.amount == 50 && this.state.otherAmount == false ? " chosen" : "")} onClick={() => this.setState({amount: 50, otherAmount: false})}>50 ש"ח</div>
+                    <div id="payment-100" className={"btn btn-primary" + (this.state.amount == 100 && this.state.otherAmount == false ? " chosen" : "")} onClick={() => this.setState({amount: 100, otherAmount: false})}>100 ש"ח</div>
+                    <div id="payment-200" className={"btn btn-primary" + (this.state.amount == 200 && this.state.otherAmount == false ? " chosen" : "")} onClick={() => this.setState({amount: 200, otherAmount: false})}>200 ש"ח</div>
                     <div>
-                        <span id="payment-other" className="btn btn-primary" onClick={() => this.setState({otherAmount: true})}>אחר</span>
+                        <span id="payment-other" className={"btn btn-primary" + (this.state.otherAmount == true ? " chosen" : "")} onClick={() => this.setState({otherAmount: true})}>אחר</span>
                         {this.state.otherAmount ? <input type="number" id="other-amount" value={this.state.amount} onChange={(e) => this.setState({amount: e.target.value})}></input> : ""}
                     </div>
                 </div>
