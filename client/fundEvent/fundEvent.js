@@ -4,6 +4,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import FundEventHeader from "./fundEventHeader";
 import FundEventBar from "./fundEventBar";
 import FundEventImage from "./funcEventImage";
+import FundEventGeneralText from "./fundEventGeneralText";
 
 class FundEvent extends Component {
     fundEvent;
@@ -30,7 +31,10 @@ class FundEvent extends Component {
                     </tbody>
                 </table>
                 <br/>
+                <FundEventGeneralText />
 
+                <br/>
+                <br/>
                 <p>{this.props.fundEvent && this.props.fundEvent.name}</p>
             </div>
         );
