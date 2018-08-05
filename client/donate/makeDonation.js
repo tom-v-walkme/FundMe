@@ -74,6 +74,6 @@ class MakeDonation extends Component {
 
 export default withTracker(() => {
     return {
-        fundEvent: FundEvents.findOne({_id: 'GLMZHZPEWfmrnmz3p'}),
+        fundEvent: FundEvents.findOne({_id: parse(location.search).id}),
     };
 })(MakeDonation);
