@@ -36,7 +36,8 @@ export default class NewFundEvent extends Component {
             bankAccountOwner: this.refs.bankAccountOwner.amount,
             payPalEmail: this.refs.payPalEmail.amount,
             bitPhone: this.refs.bitPhone.amount,
-            eventName: this.refs.eventName.amount
+            eventName: this.refs.eventName.amount,
+            donationMonthlyGoal: this.refs.donationMonthlyGoal.amount
         };
 
         let generatedId = FundEvents.insert(fundEvent);
@@ -73,6 +74,9 @@ export default class NewFundEvent extends Component {
                     </div>
                     <div className="funding-details">
                         <h3>פרטי תשלום</h3>
+                        <label>סכום יעד חודשי</label>
+                        <input type="text" ref="donationMonthlyGoal"/>
+
                         <label>בנק</label>
                         <input type="text" ref="bankCode"/>
                         <br/>
