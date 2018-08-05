@@ -1,3 +1,11 @@
+.association-description {
+    font-size: 16px;
+}
+
+.association-title {
+    text-decoration: underline;
+}
+
 .fundEventHeader {
     height: 80px;
     padding: 0px;

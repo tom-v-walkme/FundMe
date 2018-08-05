@@ -26,7 +26,7 @@ class Home extends Component {
                 <FundEventHeader />
                 <div className="events-shortcuts-wrapper">
                     {this.renderFundEvents()}
-                    <input className="create-event-btn" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
+                    <input className="create-event-btn btn btn-default" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
                 </div>
             </div>
         );
