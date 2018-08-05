@@ -15,7 +15,7 @@ export class PayPalCheckout extends Component {
         };
 
         return (
-            <PaypalExpressBtn client={client} currency={'ILS'} total={1.00} style={style}/>
+            <PaypalExpressBtn client={client} currency={'ILS'} total={this.props.amount} style={style} onSuccess={(payment) => this.props.onSuccessPayment(payment)}/>
         );
     }
 }
