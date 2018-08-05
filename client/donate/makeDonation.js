@@ -31,6 +31,10 @@ class MakeDonation extends Component {
         if (payment.paid) {
             Donations.insert(donation);
         }
+
+        alert('תודה על תרומתכם!');
+
+        this.props.history.push('/fundEvent?id=' + this.props.fundEvent._id);
     };
 
     render() {
@@ -49,7 +53,7 @@ class MakeDonation extends Component {
                     <br/>
 
                     <label>ת.ז</label>
-                    <input type="text" ref="socialId"/>
+                    <input type="number" ref="socialId"/>
                     <br/>
                 </div>
                 <div className="donate-type">
@@ -66,7 +70,9 @@ class MakeDonation extends Component {
                         {this.state.otherAmount ? <input type="number" id="other-amount" value={this.state.amount} onChange={(e) => this.setState({amount: e.target.value})}></input> : ""}
                     </div>
                 </div>
-                <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
+                <div className={this.state.amount <= 0 ? "disable-buttons" : ""}>
+                    <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
+                </div>
             </div>
         );
     }
