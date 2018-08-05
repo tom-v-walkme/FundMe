@@ -1,7 +1,20 @@
+.donation-summery-outer {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: yellow;
+}
+
+.donation-summery-outer p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .donation-bar-wrapper {
     position: absolute;
-    top: 80px;
-    left: 80px;
+    left: 0;
+    bottom: 0;
     width: 160px;
     height: 268px;
 }

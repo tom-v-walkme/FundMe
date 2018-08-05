@@ -31,12 +31,15 @@ export default class FundEventBar extends Component {
     render() {
         this.calcDonations();
         return (
-            <div className="donation-bar-wrapper">
-                <div className="total-donation-bar">
-                    <div id="total-repeating-donations"></div>
-                    <div id="total-single-donations"></div>
+            <div className="donation-summery-outer">
+            <p>תרומומטר</p>
+                <div className="donation-bar-wrapper">
+                    <div className="total-donation-bar">
+                        <div id="total-repeating-donations"></div>
+                        <div id="total-single-donations"></div>
+                    </div>
+                    <img src="/images/ProgressJar2.png" className="progress-jar" />
                 </div>
-                <img src="/images/ProgressJar2.png" className="progress-jar" />
             </div>
         );
     }
