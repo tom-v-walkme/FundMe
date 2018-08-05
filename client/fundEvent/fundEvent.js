@@ -22,7 +22,7 @@ class FundEvent extends Component {
                     <tbody>
                         <tr>
                             <td>
-                                <FundEventBar totalDonation={100000} totalRepaetingDonations={20000} totalSingleDonations={40000}/>
+                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
                             </td>
                             <td>
                                 <FundEventImage/>
