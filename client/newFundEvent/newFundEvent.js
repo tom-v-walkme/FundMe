@@ -35,7 +35,8 @@ export default class NewFundEvent extends Component {
             bankAccount: this.refs.bankAccount.amount,
             bankAccountOwner: this.refs.bankAccountOwner.amount,
             payPalEmail: this.refs.payPalEmail.amount,
-            bitPhone: this.refs.bitPhone.amount
+            bitPhone: this.refs.bitPhone.amount,
+            eventName: this.refs.eventName.amount
         };
 
         let generatedId = FundEvents.insert(fundEvent);
@@ -97,6 +98,11 @@ export default class NewFundEvent extends Component {
                         <br/>
 
                     </div>
+
+                    <label>שם האירוע</label>
+                    <input type="text" ref="eventName"/>
+                    <br/>
+
                     <label>כתבו משהו...</label>
                     <textarea name="content" id="editor"></textarea>
                     <input type="submit" value="צור עמוד"/>
