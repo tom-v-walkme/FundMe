@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {FundEvents} from '../../imports/api/fundEvents'
+import {FundEvents} from '../../imports/api/fundEvents';
 
 export default class NewFundEvent extends Component {
 
