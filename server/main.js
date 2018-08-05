@@ -7,7 +7,7 @@ console.log('events',events)
 
     if (!events || events.length === 0) {
         FundEvents.insert({
-            id:1,
+            id:"GLMZHZPEWfmrnmz3p",
             associationId:"123456",
             associationName:"עמותה",
             logoUrl:"http://desabancpa.co.il/wp-content/uploads/2016/10/Depositphotos_5983724_s-2015-250x250.jpg",
