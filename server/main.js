@@ -3,7 +3,6 @@ import {FundEvents} from '../imports/api/fundEvents.js';
 
 Meteor.startup(() => {
     const events = FundEvents.find({}).fetch();
-console.log('events',events)
 
     if (!events || events.length === 0) {
         FundEvents.insert({
