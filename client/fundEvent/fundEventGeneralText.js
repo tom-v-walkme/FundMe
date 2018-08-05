@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import renderHTML from 'react-render-html';
 
 // Task component - represents a single todo item
 export default class FundEventGeneralText extends Component {
@@ -16,7 +17,7 @@ export default class FundEventGeneralText extends Component {
                 </ul>
                 <div className="tab-content">
                     <div className="tab-pane active" id="tab1">
-                        <div className="event-description">{this.props.fundEvent && this.props.fundEvent.eventDetails}</div>
+                        <div className="event-description">{this.props.fundEvent && renderHTML(this.props.fundEvent.eventDetails)}</div>
                     </div>
                     <div className="tab-pane" id="tab2">
                         <div className="association-description">{this.props.fundEvent && this.props.fundEvent.associationDescription}</div>
