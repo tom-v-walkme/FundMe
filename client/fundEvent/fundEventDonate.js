@@ -13,7 +13,8 @@ class FundEventDonate extends Component {
     render() {
         return (
             <div>
-                <button type="button" className="btn btn-primary" onClick={this.donate.bind(this)}>תרמו לנו</button>
+                <button type="button" className="btn btn-primary" onClick={this.donate.bind(this)}>תרומה קבועה</button>
+                <button type="button" className="btn btn-secondary" onClick={this.donate.bind(this)}>תרומה חד-פעמית</button>
             </div>
         );
     }

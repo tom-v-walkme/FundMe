@@ -4,7 +4,6 @@
     left: 0;
     width: 400px;
     height: 350px;
-    background: yellow;
 }
 
 .donation-summery-outer p {
@@ -53,4 +52,42 @@
 
 #total-single-donations {
     background: #8c71d3;
+}
+
+.donation-summery-outer p.total-donation {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.donation-summery {
+    position: absolute;
+    bottom: 0;
+    width: 240px;
+    height: 170px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.donation-summery p {
+    font-size: 18px;
+}
+
+.donation-summery p.donation-description {
+    font-weight: normal;
+    margin-bottom: 0;
+    
+}
+
+.donation-summery p.donation-amount {
+    margin-bottom: 15px;
+}
+
+.donation-summery p.donation-amount.repeating-donation-amount {
+    color: #07b2ea;
+}
+
+.donation-summery p.donation-amount.single-donation-amount {
+    color: #8c71d3;
 }
