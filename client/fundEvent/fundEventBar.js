@@ -22,10 +22,10 @@ export default class FundEventBar extends Component {
 
         let totalRepeatingDonations = this.props.donations.filter((d) => d.type == "monthly").reduce((a, c) => a + c.payment, 0);
         let totalSingleDonations = this.props.donations.filter((d) => d.type == "single").reduce((a, c) => a + c.payment, 0);
-        let totalDonation = this.props.fundEvent.donationMonthlyGoal || (totalRepeatingDonations + totalSingleDonations);
+        this.totalDonation = this.props.fundEvent.donationMonthlyGoal || (totalRepeatingDonations + totalSingleDonations);
 
-        var RepeatingDonationsPercent =  100 * totalRepeatingDonations / totalDonation;
-        var singleDonationsPercent =  100 * totalSingleDonations / totalDonation;
+        var RepeatingDonationsPercent =  100 * totalRepeatingDonations / this.totalDonation;
+        var singleDonationsPercent =  100 * totalSingleDonations / this.totalDonation;
 
         repeatingDonationsElement.style.height = RepeatingDonationsPercent + "%";
         singleDonationsElement.style.bottom = RepeatingDonationsPercent + "%";
@@ -38,7 +38,7 @@ export default class FundEventBar extends Component {
             <div className="donation-summery-outer">
             <p>תרומומטר</p>
                 <div className="donation-bar-wrapper">
-                    <p></p>
+                    <p className="total-donation">{this.totalDonation}</p>
                     <div className="total-donation-bar">
                         <div id="total-repeating-donations"></div>
                         <div id="total-single-donations"></div>
