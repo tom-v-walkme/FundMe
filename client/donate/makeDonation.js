@@ -46,6 +46,10 @@ class MakeDonation extends Component {
                     <input type="text" ref="socialId"/>
                     <br/>
                 </div>
+                <div className="donate-type">
+                    <div id="monthly-donate">תרומה חודשית</div>
+                    <div id="single-donate">תרומה חד-פעמית</div>
+                </div>
                 <div className="amount-details">
                     <div id="payment-25" onClick={() => this.setState({value: 25})}>25 ש"ח</div>
                     <div id="payment-50" onClick={() => this.setState({value: 50})}>50 ש"ח</div>
@@ -63,6 +67,6 @@ class MakeDonation extends Component {
 
 export default withTracker(() => {
     return {
-        fundEvent: FundEvents.findOne({_id: parse(location.search).id}),
+        fundEvent: FundEvents.findOne({_id: 'GLMZHZPEWfmrnmz3p'}),
     };
 })(MakeDonation);

@@ -10,7 +10,7 @@ export class PayPalCheckout extends Component {
         const style = {
             layout: 'vertical',
             size:   'medium',
-            shape:  'pill',
+            shape:  'rect',
             color:  'blue'
         };
 
