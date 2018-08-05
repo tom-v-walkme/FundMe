@@ -18,7 +18,7 @@ class FundEvent extends Component {
         return (
             <div>
                 <FundEventHeader/>
-                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
+                <p>{this.props.fundEvent && (this.props.fundEvent.associationName + '-' + this.props.fundEvent.eventName)}</p>
                 <br/>
                 <FundEventImage event={this.props.fundEvent}/>
 
