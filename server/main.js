@@ -15,7 +15,7 @@ Meteor.startup(() => {
             homePage:"http://amuta.co.il",
             phoneNumber:"03-6666666",
             eventName:"אירוע התרמה לילדים וילדות",
-            eventDetails:"<p>כתבנו <strong>משהו</strong></p><ol><li>תרמו</li><li>תודה</li></ol>",
+            eventDetails:"<h2>אם גם אתם רוצים לעזור <strong>לילדים החמודים בעולם</strong></h2><h3>בואו <i>לעשות כל מה שאתם יכולים בשביל</i> הילדים</h3><h4>הם הילדים של כולנו וישמחו לקבל מכל אחד ואחת ממכם כל שקל למען המטרה הנהדרת</h4>",
             bankCode:"14",
             bankBranch:"111",
             bankAccount:"99999",

@@ -49,9 +49,8 @@ class MakeDonation extends Component {
                     ref={ref => this.container = ref}
                     className="toast-top-right"
                 />
-                <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
-
                 <div className="content-wrapper">
+                    <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                     <div className="donner-details">
                         <label>שם פרטי</label>
                         <input type="text" ref="firstName"/>
