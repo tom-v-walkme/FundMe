@@ -15,21 +15,27 @@ class FundEvent extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <FundEventHeader/>
-                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
-                <br/>
-                <FundEventImage event={this.props.fundEvent}/>
+        if (this.props.fundEvent) {
+            return (
+                <div>
+                    <FundEventHeader/>
+                    <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
+                    <br/>
+                    <FundEventImage event={this.props.fundEvent}/>
 
-                <FundEventBar donations={this.props.donations}/>
-                <br/>
-                <FundEventGeneralText fundEvent={this.props.fundEvent}/>
-                <br/>
-                <br/>
-                <FundEventDonate fundEvent={this.props.fundEvent}/>
-            </div>
-        );
+                    <FundEventBar donations={this.props.donations}/>
+                    <br/>
+                    <FundEventGeneralText fundEvent={this.props.fundEvent}/>
+                    <br/>
+                    <br/>
+                    <FundEventDonate fundEvent={this.props.fundEvent}/>
+                </div>
+            );
+        } else {
+            return (
+              <div></div>
+            );
+        }
     }
 }
 
