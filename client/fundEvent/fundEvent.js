@@ -23,7 +23,7 @@ class FundEvent extends Component {
                     <br/>
                     <FundEventImage event={this.props.fundEvent}/>
 
-                    <FundEventBar donations={this.props.donations}/>
+                    <FundEventBar donations={this.props.donations} fundEvent={this.props.fundEvent}/>
                     <br/>
                     <FundEventGeneralText fundEvent={this.props.fundEvent}/>
                     <br/>

@@ -16,9 +16,11 @@ export default class FundEventBar extends Component {
             return;
         }
 
-        let totalDonation = 600;
         let totalRepeatingDonations = this.props.donations.filter((d) => d.type == "monthly").reduce((a, c) => a + c.payment, 0);
         let totalSingleDonations = this.props.donations.filter((d) => d.type == "single").reduce((a, c) => a + c.payment, 0);
+        let totalDonation = this.props.fundEvent.donationMonthlyGoal || (totalRepeatingDonations + totalSingleDonations);
+
+        console.log(totalDonation, totalSingleDonations, totalRepeatingDonations);
 
         var RepeatingDonationsPercent =  100 * totalRepeatingDonations / totalDonation;
         var singleDonationsPercent =  100 * totalSingleDonations / totalDonation;

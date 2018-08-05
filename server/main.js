@@ -21,7 +21,8 @@ Meteor.startup(() => {
             bankAccount:"99999",
             bankAccountOwner:"עמותה עמותה",
             payPalEmail:"amuta@gmail.co.il",
-            bitPhone:"050-6666666"
+            bitPhone:"050-6666666",
+            donationMonthlyGoal: "50000"
         });
     }
 
