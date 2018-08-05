@@ -15,7 +15,7 @@ class FundEvent extends Component {
     }
 
     render() {
-        console.log("a",this.props);
+        console.log("total donations",this.props.donations && this.props.donations.reduce((a, c) => a + c.payment, 0));
         return (
             <div>
                 <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
