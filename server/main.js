@@ -9,12 +9,12 @@ Meteor.startup(() => {
         FundEvents.insert({
             _id:"GLMZHZPEWfmrnmz3p",
             associationId:"123456",
-            associationName:"עמותה",
-            associationDescription:"תיאור תיאור תיאור",
+            associationName:"לתת",
+            associationDescription:"עכשיו גם אתם יכולים לעזור ולהעניק חיים חדשים ומלאי משמעות וחוויות לילדים ברחבי העולם",
             logoUrl:"http://desabancpa.co.il/wp-content/uploads/2016/10/Depositphotos_5983724_s-2015-250x250.jpg",
             homePage:"http://amuta.co.il",
             phoneNumber:"03-6666666",
-            eventName:"אירוע התרמה למשהו טוב",
+            eventName:"אירוע התרמה לילדים וילדות",
             eventDetails:"<p>כתבנו <strong>משהו</strong></p><ol><li>תרמו</li><li>תודה</li></ol>",
             bankCode:"14",
             bankBranch:"111",
@@ -22,7 +22,7 @@ Meteor.startup(() => {
             bankAccountOwner:"עמותה עמותה",
             payPalEmail:"amuta@gmail.co.il",
             bitPhone:"050-6666666",
-            donationMonthlyGoal: 10000
+            donationMonthlyGoal: 7000
         });
 
         FundEvents.insert({
@@ -39,7 +39,8 @@ Meteor.startup(() => {
             bankAccountOwner:"חוות החופש",
             payPalEmail:"freedom@gmail.com",
             bitPhone:"08-6695524",
-            eventName: "התרמת לטיפולים רפואיים בחווה"
+            eventName: "התרמת לטיפולים רפואיים בחווה",
+            donationMonthlyGoal: 2000
         });
 
         FundEvents.insert({
@@ -56,7 +57,8 @@ Meteor.startup(() => {
             bankAccountOwner:"חיים לבעלי חיים",
             payPalEmail:"chaimtoanimals@gmail.com",
             bitPhone:"03-5652121",
-            eventName: "גיוס למען בעלי חיים"
+            eventName: "גיוס למען בעלי חיים",
+            donationMonthlyGoal: 5500
         });
     }
 
@@ -87,6 +89,24 @@ Meteor.startup(() => {
             payment: 500,
             fundEventId: "GLMZHZPEWfmrnmz3p",
             type: "single"
+        });
+
+        Donations.insert({
+            firstName: "Mani",
+            lastName: "Umberla",
+            socialId: 1223,
+            payment: 800,
+            fundEventId: "LJaKdpNZPEDdhHiej",
+            type: "single"
+        });
+
+        Donations.insert({
+            firstName: "Sami",
+            lastName: "The Fireman",
+            socialId: 1133,
+            payment: 2300,
+            fundEventId: "29suDFHs8Dai5M6m6",
+            type: "monthly"
         });
     }
 });
