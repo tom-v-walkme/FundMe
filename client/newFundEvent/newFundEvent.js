@@ -36,7 +36,9 @@ export default class NewFundEvent extends Component {
             bitPhone: this.refs.bitPhone.value
         };
 
-        FundEvents.insert(fundEvent);
+        let generatedId = FundEvents.insert(fundEvent);
+
+        this.props.history.push('/fundEventCreated?id=' + generatedId);
     }
 
     render() {
