@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {FundEvents} from '../../imports/api/fundEvents';
+import {Donations} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
 import FundEventHeader from "./fundEventHeader";
 import FundEventBar from "./fundEventBar";
@@ -14,6 +15,7 @@ class FundEvent extends Component {
     }
 
     render() {
+        console.log("a",this.props);
         return (
             <div>
                 <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
@@ -45,5 +47,6 @@ class FundEvent extends Component {
 export default withTracker(() => {
     return {
         fundEvent: FundEvents.findOne({_id: parse(location.search).id}),
+        donations: Donations.find({fundEventId: parse(location.search).id}).fetch()
     };
 })(FundEvent);

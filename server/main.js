@@ -1,5 +1,6 @@
 import {Meteor} from 'meteor/meteor';
 import {FundEvents} from '../imports/api/fundEvents.js';
+import {Donations} from '../imports/api/fundEvents.js';
 
 Meteor.startup(() => {
     const events = FundEvents.find({}).fetch();
@@ -20,6 +21,34 @@ Meteor.startup(() => {
             bankAccountOwner:"עמותה עמותה",
             payPalEmail:"amuta@gmail.co.il",
             bitPhone:"050-6666666"
+        });
+    }
+
+    const donations = Donations.find({}).fetch();
+
+    if (!donations || donations.length === 0) {
+        Donations.insert({
+            firstName: "Amir",
+            lastName: "S",
+            socialId: 1123,
+            payment: 100,
+            fundEventId: "GLMZHZPEWfmrnmz3p"
+        });
+
+        Donations.insert({
+            firstName: "Sami",
+            lastName: "The Fireman",
+            socialId: 1133,
+            payment: 20,
+            fundEventId: "GLMZHZPEWfmrnmz3p"
+        });
+
+        Donations.insert({
+            firstName: "Mani",
+            lastName: "Umberla",
+            socialId: 1223,
+            payment: 30,
+            fundEventId: "GLMZHZPEWfmrnmz3p"
         });
     }
 });
