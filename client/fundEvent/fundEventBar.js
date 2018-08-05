@@ -12,14 +12,10 @@ export default class FundEventBar extends Component {
         var repaetingDonationsElement = document.getElementById("total-repaeting-donations");
         var singleDonationsElement = document.getElementById("total-single-donations");
 
-        var totalDonation = 20000;
-        var totalRepaetingDonations = 10000;
-        var totalSingleDonations = 5000;
+        var RepaetingDonationsPercent =  100 * this.props.totalRepaetingDonations / this.props.totalDonation;
+        var singleDonationsPercent =  100 * this.props.totalSingleDonations / this.props.totalDonation;
 
-        var RepaetingDonationsPercent =  100 * totalRepaetingDonations / totalDonation;
-        var singleDonationsPercent =  100 * totalSingleDonations / totalDonation;
-
-        repaetingDonationsElement.style.top = RepaetingDonationsPercent + "%";
+        repaetingDonationsElement.style.height = RepaetingDonationsPercent + "%";
         singleDonationsElement.style.bottom = RepaetingDonationsPercent + "%";
         singleDonationsElement.style.height = singleDonationsPercent + "%";
     }
