@@ -38,6 +38,7 @@ export default class FundEventBar extends Component {
             <div className="donation-summery-outer">
             <p>תרומומטר</p>
                 <div className="donation-bar-wrapper">
+                    <p></p>
                     <div className="total-donation-bar">
                         <div id="total-repeating-donations"></div>
                         <div id="total-single-donations"></div>
