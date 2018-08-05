@@ -38,7 +38,7 @@ export default class NewFundEvent extends Component {
 
         let generatedId = FundEvents.insert(fundEvent);
 
-        this.props.history.push('/fundEventCreated?id=' + generatedId);
+        this.props.history.push('/fundEvent?id=' + generatedId);
     }
 
     render() {
