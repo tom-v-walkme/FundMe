@@ -13,7 +13,6 @@ Meteor.startup(() => {
             logoUrl:"http://desabancpa.co.il/wp-content/uploads/2016/10/Depositphotos_5983724_s-2015-250x250.jpg",
             homePage:"http://amuta.co.il",
             phoneNumber:"03-6666666",
-            eventDescription: "עוד תיאור תיאור תיאור עוד",
             eventDetails:"<p>כתבנו <strong>משהו</strong></p><ol><li>תרמו</li><li>תודה</li></ol>",
             bankCode:"14",
             bankBranch:"111",

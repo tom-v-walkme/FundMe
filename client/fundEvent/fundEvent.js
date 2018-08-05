@@ -31,30 +31,7 @@ class FundEvent extends Component {
                     </tbody>
                 </table>
                 <br/>
-                <FundEventGeneralText />
-
-                <div class="tabs">
-                    <ul className="nav nav-tabs">
-                        <li role="presentation" className="active">
-                            <span data-target="#tab1" data-toggle="tab">פרטים:</span>
-                        </li>
-
-                        <li role="presentation" >
-                            <span data-target="#tab2" data-toggle="tab">פרטים על האגודה:</span>
-                        </li>
-                    </ul>
-                    <div className="tab-content">
-                        <div className="tab-pane active" id="tab1">
-                            <div
-                                className="event-description">{this.props.fundEvent && this.props.fundEvent.eventDescription}</div>
-                        </div>
-                        <div className="tab-pane" id="tab2">
-                            <div
-                                className="association-description">{this.props.fundEvent && this.props.fundEvent.associationDescription}</div>
-                            <div className="phone-number">{this.props.fundEvent && this.props.fundEvent.phoneNumber}</div>
-                        </div>
-                    </div>
-                </div>
+                <FundEventGeneralText fundEvent={this.props.fundEvent}/>
 
                 <br/>
                 <br/>
