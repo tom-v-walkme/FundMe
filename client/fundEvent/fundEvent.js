@@ -32,12 +32,29 @@ class FundEvent extends Component {
                 </table>
                 <br/>
                 <FundEventGeneralText />
-                <p>פרטים:</p>
-                <div>{this.props.fundEvent && this.props.fundEvent.eventDescription}</div>
 
-                <p>פרטים על האגודה:</p>
-                <div>{this.props.fundEvent && this.props.fundEvent.associationDescription}</div>
-                <div>{this.props.fundEvent && this.props.fundEvent.phoneNumber}</div>
+                <div class="tabs">
+                    <ul className="nav nav-tabs">
+                        <li role="presentation" className="active">
+                            <span data-target="#tab1" data-toggle="tab">פרטים:</span>
+                        </li>
+
+                        <li role="presentation" >
+                            <span data-target="#tab2" data-toggle="tab">פרטים על האגודה:</span>
+                        </li>
+                    </ul>
+                    <div className="tab-content">
+                        <div className="tab-pane active" id="tab1">
+                            <div
+                                className="event-description">{this.props.fundEvent && this.props.fundEvent.eventDescription}</div>
+                        </div>
+                        <div className="tab-pane" id="tab2">
+                            <div
+                                className="association-description">{this.props.fundEvent && this.props.fundEvent.associationDescription}</div>
+                            <div className="phone-number">{this.props.fundEvent && this.props.fundEvent.phoneNumber}</div>
+                        </div>
+                    </div>
+                </div>
 
                 <br/>
                 <br/>
