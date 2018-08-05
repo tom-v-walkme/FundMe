@@ -17,6 +17,11 @@ body {
   background-color: lightgray;
 }
 
+form {
+  width: 860px;
+  margin: 0 auto;
+}
+
 .client-details,
 .funding-details {
   display: inline-block;
@@ -27,6 +32,9 @@ body {
 
 label {
   width: 200px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .fundEventHeader {

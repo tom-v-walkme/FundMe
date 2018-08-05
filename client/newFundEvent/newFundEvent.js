@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {FundEvents} from '../../imports/api/fundEvents';
+import {FundEvents} from '../../imports/api/fundEvents'
 
 export default class NewFundEvent extends Component {
 
@@ -44,6 +44,8 @@ export default class NewFundEvent extends Component {
     render() {
         return (
             <div>
+                <img src="C:/Projects/FundMe/client/images/fundme.svg" />
+                
                 <form className="create-campaign" onSubmit={this.create.bind(this)}>
                     <div class="client-details">
                         <h3>פרטי עמותה</h3>
@@ -51,7 +53,7 @@ export default class NewFundEvent extends Component {
                         <input type="text" ref="name"/>
                         <br/>
 
-                        <label>לוגו העמותה</label>
+                        <label>לוגו העמותה (URL)</label>
                         <input type="text" ref="logoUrl"/>
                         <br/>
 
@@ -66,13 +68,9 @@ export default class NewFundEvent extends Component {
                         <label>טלפון</label>
                         <input type="text" ref="phone"/>
                         <br/>
-                        <label>כתבו משהו...</label>
-                        <textarea name="content" id="editor"></textarea>
-                        <br/>
                     </div>
                     <div class="funding-details">
                         <h3>פרטי תשלום</h3>
-                        <br/>
                         <label>בנק</label>
                         <input type="text" ref="bankCode"/>
                         <br/>
@@ -99,6 +97,9 @@ export default class NewFundEvent extends Component {
 
                         <input type="submit" value="צור עמוד"/>
                     </div>
+                    <label>כתבו משהו...</label>
+                        <textarea name="content" id="editor"></textarea>
+
                 </form>
             </div>
         );
