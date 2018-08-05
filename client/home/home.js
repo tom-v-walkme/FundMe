@@ -26,7 +26,7 @@ class Home extends Component {
 
                 {this.renderFundEvents()}
 
-                <input type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
+                <input className="create-event-btn" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
             </div>
         );
     }

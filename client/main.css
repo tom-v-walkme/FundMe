@@ -66,3 +66,21 @@ input[type="submit"] {
 .ck-editor__main p {
   height: 160px;
 }
+
+.fund-event-shortcut {
+    display: inline-block;
+}
+
+.shortcut-image {
+    display: inline-block;
+    padding: 20px 20px 20px 20px;
+}
+
+.shortcut-image .fund-event-image img {
+    height: 300px;
+    width: 300px;
+}
+
+.create-event-btn {
+    display: block;
+}
