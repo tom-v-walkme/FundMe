@@ -3,7 +3,6 @@ import { Router, Route, Switch, Redirect } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 // route components
-import HomePage from '../home/homePage';
 import NewFundEvent from '../newFundEvent/newFundEvent';
 import FundEvent from '../fundEvent/fundEvent';
 import MakeDonation from '../donate/makeDonation';
