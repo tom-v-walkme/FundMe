@@ -22,18 +22,18 @@ export default class NewFundEvent extends Component {
         e.preventDefault();
 
         const fundEvent = {
-            associationId: this.refs.associationId.value,
-            associationName: this.refs.name.value,
-            logoUrl: this.refs.logoUrl.value,
-            homePage: this.refs.homePage.value,
-            phoneNumber: this.refs.phone.value,
+            associationId: this.refs.associationId.amount,
+            associationName: this.refs.name.amount,
+            logoUrl: this.refs.logoUrl.amount,
+            homePage: this.refs.homePage.amount,
+            phoneNumber: this.refs.phone.amount,
             eventDetails: window.editor.getData(),
-            bankCode: this.refs.bankCode.value,
-            bankBranch: this.refs.bankBranch.value,
-            bankAccount: this.refs.bankAccount.value,
-            bankAccountOwner: this.refs.bankAccountOwner.value,
-            payPalEmail: this.refs.payPalEmail.value,
-            bitPhone: this.refs.bitPhone.value
+            bankCode: this.refs.bankCode.amount,
+            bankBranch: this.refs.bankBranch.amount,
+            bankAccount: this.refs.bankAccount.amount,
+            bankAccountOwner: this.refs.bankAccountOwner.amount,
+            payPalEmail: this.refs.payPalEmail.amount,
+            bitPhone: this.refs.bitPhone.amount
         };
 
         let generatedId = FundEvents.insert(fundEvent);
