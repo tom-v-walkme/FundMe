@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FundEvents, Donations} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
 import {PayPalCheckout} from './payPalCheckout';
+import {parse} from "query-string";
 
 class MakeDonation extends Component {
 
@@ -30,9 +31,7 @@ class MakeDonation extends Component {
     render() {
         return (
             <div>
-                <p>Donate to {this.props.fundEvent && this.props.fundEvent.name}</p>
-
-                <img src="C:/Projects/FundMe/client/images/fundme.svg" />
+                <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
 
                 <div className="donner-details">
                     <label>שם פרטי</label>
@@ -46,6 +45,10 @@ class MakeDonation extends Component {
                     <label>ת.ז</label>
                     <input type="text" ref="socialId"/>
                     <br/>
+                </div>
+                <div className="donate-type">
+                    <div id="monthly-donate">תרומה חודשית</div>
+                    <div id="single-donate">תרומה חד-פעמית</div>
                 </div>
                 <div className="amount-details">
                     <div id="payment-25" onClick={() => this.setState({value: 25})}>25 ש"ח</div>

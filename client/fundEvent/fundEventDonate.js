@@ -7,7 +7,7 @@ class FundEventDonate extends Component {
     }
 
     donate() {
-        this.props.history.push('/donate')
+        this.props.history.push('/donate?id=' + this.props.fundEvent._id)
     };
 
     render() {

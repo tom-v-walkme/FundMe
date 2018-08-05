@@ -17,7 +17,7 @@ export const renderRoutes = () => (
             <Route exact path="/newFundEvent" component={NewFundEvent}/>
             <Route exact path="/fundEvent" component={FundEvent}/>
             <Route exact path="/donate" component={MakeDonation}/>
-            <Redirect from="/" to="fundEvent" />
+            <Redirect from="/" to="home" />
         </Switch>
     </Router>
 );
