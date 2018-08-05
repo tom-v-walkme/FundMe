@@ -22,7 +22,7 @@ Meteor.startup(() => {
             bankAccountOwner:"עמותה עמותה",
             payPalEmail:"amuta@gmail.co.il",
             bitPhone:"050-6666666",
-            donationMonthlyGoal: "50000"
+            donationMonthlyGoal: 10000
         });
     }
 
@@ -32,7 +32,7 @@ Meteor.startup(() => {
             firstName: "Amir",
             lastName: "S",
             socialId: 1123,
-            payment: 100,
+            payment: 1000,
             fundEventId: "GLMZHZPEWfmrnmz3p",
             type: "single"
         });
@@ -41,7 +41,7 @@ Meteor.startup(() => {
             firstName: "Sami",
             lastName: "The Fireman",
             socialId: 1133,
-            payment: 20,
+            payment: 2000,
             fundEventId: "GLMZHZPEWfmrnmz3p",
             type: "monthly"
         });
@@ -50,7 +50,7 @@ Meteor.startup(() => {
             firstName: "Mani",
             lastName: "Umberla",
             socialId: 1223,
-            payment: 30,
+            payment: 500,
             fundEventId: "GLMZHZPEWfmrnmz3p",
             type: "single"
         });
