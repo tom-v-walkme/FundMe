@@ -19,16 +19,17 @@ class FundEvent extends Component {
             return (
                 <div>
                     <FundEventHeader/>
-                    <p>{this.props.fundEvent.associationName + '-' + this.props.fundEvent.eventName}</p>
-                    <br/>
-                    <FundEventImage event={this.props.fundEvent}/>
-
-                    <FundEventBar donations={this.props.donations} fundEvent={this.props.fundEvent}/>
-                    <br/>
-                    <FundEventGeneralText fundEvent={this.props.fundEvent}/>
-                    <br/>
-                    <br/>
-                    <FundEventDonate fundEvent={this.props.fundEvent}/>
+                    <div className="content-wrapper event-wrapper">
+                        <br/>
+                        <FundEventImage event={this.props.fundEvent}/>
+                        <p className="event-title">{this.props.fundEvent.associationName + ' - ' + this.props.fundEvent.eventName}</p>
+                        <FundEventBar donations={this.props.donations} fundEvent={this.props.fundEvent}/>
+                        <br/>
+                        <FundEventGeneralText fundEvent={this.props.fundEvent}/>
+                        <br/>
+                        <br/>
+                        <FundEventDonate fundEvent={this.props.fundEvent}/>
+                    </div>
                 </div>
             );
         } else {

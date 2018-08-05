@@ -25,7 +25,8 @@ body {
 }
 
 /* Home */ 
-.events-shortcuts-wrapper {
+.content-wrapper {
+  position: relative;
   width: 960px;
   margin: 0 auto;
 
@@ -129,4 +130,17 @@ input[type="button"] {
   margin: 20px auto 0;
   font-size: 24px;
 
+}
+
+/* Event Page */
+.event-wrapper .event-hover-panel {
+  display: none;
+}
+
+.event-wrapper .event-title {
+  padding: 10px 0;
+  border-bottom: 1px solid #222222;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1b8fcf;
 }
