@@ -19,6 +19,7 @@ body {
 }
 
 .fundme-logo {
+  cursor: pointer;
   display: table;
   margin: 30px auto;
 }

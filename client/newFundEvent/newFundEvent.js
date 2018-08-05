@@ -44,7 +44,6 @@ export default class NewFundEvent extends Component {
     render() {
         return (
             <div>
-                <img src="/images/fundme.svg" className="fundme-logo" />
                 <form className="create-campaign" onSubmit={this.create.bind(this)}>
                     <div className="client-details">
                         <h3>פרטי עמותה</h3>

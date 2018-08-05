@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {FundEvents} from '../../imports/api/fundEvents';
 import {Donations} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
-import FundEventHeader from "./fundEventHeader";
 import FundEventBar from "./fundEventBar";
 import FundEventImage from "./funcEventImage";
 import FundEventGeneralText from "./fundEventGeneralText";
@@ -18,13 +17,12 @@ class FundEvent extends Component {
         console.log("total donations",this.props.donations && this.props.donations.reduce((a, c) => a + c.payment, 0));
         return (
             <div>
-                <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
 
-                                <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
+                <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
 
-                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
+                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
                 <br/>
                 <FundEventGeneralText fundEvent={this.props.fundEvent}/>
                 <br/>
