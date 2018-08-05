@@ -44,9 +44,9 @@ export default class NewFundEvent extends Component {
     render() {
         return (
             <div>
-                
+                <img src="/images/fundme.svg" className="fundme-logo" />
                 <form className="create-campaign" onSubmit={this.create.bind(this)}>
-                    <div class="client-details">
+                    <div className="client-details">
                         <h3>פרטי עמותה</h3>
                         <label>שם העמותה</label>
                         <input type="text" ref="name"/>
@@ -68,7 +68,7 @@ export default class NewFundEvent extends Component {
                         <input type="text" ref="phone"/>
                         <br/>
                     </div>
-                    <div class="funding-details">
+                    <div className="funding-details">
                         <h3>פרטי תשלום</h3>
                         <label>בנק</label>
                         <input type="text" ref="bankCode"/>
@@ -94,10 +94,10 @@ export default class NewFundEvent extends Component {
                         <input type="text" ref="bitPhone"/>
                         <br/>
 
-                        <input type="submit" value="צור עמוד"/>
                     </div>
                     <label>כתבו משהו...</label>
-                        <textarea name="content" id="editor"></textarea>
+                    <textarea name="content" id="editor"></textarea>
+                    <input type="submit" value="צור עמוד"/>
 
                 </form>
             </div>

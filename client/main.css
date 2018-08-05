@@ -10,16 +10,29 @@
 
 body {
   padding: 10px;
+  margin-bottom: 20px;
   font-family: 'Alef';
   text-align: right;
   direction: rtl;
-  background: url('images/background.jpg');
-  background-color: lightgray;
+  background: url('images/WoodBG2.png');
+}
+
+.fundme-logo {
+  display: table;
+  margin: 30px auto;
 }
 
 form {
   width: 860px;
+  padding: 30px;
   margin: 0 auto;
+  background: rgba(255,255,255,0.4);
+}
+
+h3 {
+  margin: 0 0 30px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .client-details,
@@ -27,12 +40,29 @@ form {
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  padding: 20px;
 }
 
 label {
-  width: 200px;
+  width: 180px;
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
+}
+
+input[type="text"] {
+  width: 182px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #222222;
+}
+
+input[type="submit"] {
+  display: table;
+  margin: 20px auto 0;
+  font-size: 24px;
+
+}
+
+.ck-editor__main p {
+  height: 160px;
 }
