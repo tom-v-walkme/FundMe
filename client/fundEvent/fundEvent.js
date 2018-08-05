@@ -38,7 +38,7 @@ class FundEvent extends Component {
 
                 <br/>
                 <br/>
-                <FundEventDonate/>
+                <FundEventDonate fundEvent={this.props.fundEvent}/>
             </div>
         );
     }

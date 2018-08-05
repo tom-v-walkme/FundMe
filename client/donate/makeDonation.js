@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FundEvents, Donations} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
 import {PayPalCheckout} from './payPalCheckout';
+import {parse} from "query-string";
 
 class MakeDonation extends Component {
 
@@ -30,9 +31,7 @@ class MakeDonation extends Component {
     render() {
         return (
             <div>
-                <p>Donate to {this.props.fundEvent && this.props.fundEvent.name}</p>
-
-                <img src="C:/Projects/FundMe/client/images/fundme.svg" />
+                <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
 
                 <div className="donner-details">
                     <label>שם פרטי</label>
@@ -64,6 +63,6 @@ class MakeDonation extends Component {
 
 export default withTracker(() => {
     return {
-        fundEvent: FundEvents.findOne({_id: 'GLMZHZPEWfmrnmz3p'}),
+        fundEvent: FundEvents.findOne({_id: parse(location.search).id}),
     };
 })(MakeDonation);
