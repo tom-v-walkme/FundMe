@@ -6,6 +6,7 @@ import FundEventBar from "./fundEventBar";
 import FundEventImage from "./funcEventImage";
 import FundEventGeneralText from "./fundEventGeneralText";
 import FundEventDonate from "./fundEventDonate";
+import FundEventHeader from "../shared/fundEventHeader";
 import {parse} from 'query-string';
 
 class FundEvent extends Component {
@@ -19,8 +20,9 @@ class FundEvent extends Component {
                 <FundEventHeader/>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
-                    <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
-                    <FundEventBar donations={this.props.donations}/>
+                <FundEventImage event={this.props.fundEvent}/>
+
+                <FundEventBar donations={this.props.donations}/>
                 <br/>
                 <FundEventGeneralText fundEvent={this.props.fundEvent}/>
                 <br/>

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {withTracker} from 'meteor/react-meteor-data';
 import {FundEvents} from '../../imports/api/fundEvents'
 import FundEventShortcut from './fundEventShortcut';
+import FundEventHeader from "../shared/fundEventHeader";
 
 class Home extends Component {
     constructor() {
@@ -22,6 +23,7 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <FundEventHeader />
                 <div className="events-shortcuts-wrapper">
                     {this.renderFundEvents()}
                     <input className="create-event-btn" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>

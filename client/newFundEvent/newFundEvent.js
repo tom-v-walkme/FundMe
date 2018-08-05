@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import {FundEvents} from '../../imports/api/fundEvents';
 
+import FundEventHeader from "../shared/fundEventHeader";
+
 export default class NewFundEvent extends Component {
 
     constructor() {
@@ -44,6 +46,7 @@ export default class NewFundEvent extends Component {
     render() {
         return (
             <div>
+                <FundEventHeader />
                 <form className="create-campaign" onSubmit={this.create.bind(this)}>
                     <div className="client-details">
                         <h3>פרטי עמותה</h3>

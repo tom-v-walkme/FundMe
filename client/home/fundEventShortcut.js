@@ -13,7 +13,7 @@ class FundEventShortcut extends Component {
         return (
             <div className="fund-event-shortcut">
                 <div className="shortcut-image" onClick={this.goToEventPage.bind(this)}>
-                    <FundEventImage url={this.props.event.logoUrl}/>
+                    <FundEventImage event={this.props.event}/>
                 </div>
             </div>
         );

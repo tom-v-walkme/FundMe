@@ -5,9 +5,9 @@ export default class FundEventImage extends Component {
     render() {
         return (
             <div className="fund-event-image">
-                <img src={this.props.url} />
+                <img src={this.props.event.logoUrl} />
                 <div className="event-hover-panel">
-                    לורם איפסום אמאשך משומשת
+                    <span>{this.props.event.associationDescription}</span>
                 </div>
             </div>
         );
