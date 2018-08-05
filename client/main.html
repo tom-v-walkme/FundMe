@@ -1,7 +1,16 @@
 <head>
     <title>Todo List</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
 
 <body>
+<textarea name="content" id="editor"></textarea>
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+</script>
     <div id="render-target"></div>
 </body>
