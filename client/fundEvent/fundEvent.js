@@ -16,6 +16,7 @@ class FundEvent extends Component {
     render() {
         return (
             <div>
+                <FundEventHeader/>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
                     <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>

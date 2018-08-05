@@ -4,6 +4,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {PayPalCheckout} from './payPalCheckout';
 import './makeDonation.css';
 import {parse} from "query-string";
+import FundEventHeader from "../fundEvent/fundEventHeader";
 
 class MakeDonation extends Component {
 
@@ -35,6 +36,7 @@ class MakeDonation extends Component {
     render() {
         return (
             <div>
+                <FundEventHeader/>
                 <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
 
                 <div className="donner-details">
