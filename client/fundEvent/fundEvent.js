@@ -23,7 +23,7 @@ class FundEvent extends Component {
                     <tbody>
                         <tr>
                             <td>
-                                <FundEventImage/>
+                                <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
                             </td>
                             <td>
                                 <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
