@@ -4,7 +4,7 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {PayPalCheckout} from './payPalCheckout';
 import './makeDonation.css';
 import {parse} from "query-string";
-import FundEventHeader from "../fundEvent/fundEventHeader";
+import FundEventHeader from "../shared/fundEventHeader";
 
 class MakeDonation extends Component {
 
