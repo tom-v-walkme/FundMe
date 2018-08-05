@@ -15,8 +15,8 @@ class FundEvent extends Component {
     render() {
         return (
             <div>
-                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <FundEventHeader />
+                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
                 <table>
                     <tbody>
