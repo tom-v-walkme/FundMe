@@ -23,10 +23,10 @@ class Home extends Component {
         return (
             <div>
                 <img src="/images/fundme.svg" className="fundme-logo" />
-
-                {this.renderFundEvents()}
-
-                <input className="create-event-btn" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
+                <div className="events-shortcuts-wrapper">
+                    {this.renderFundEvents()}
+                    <input className="create-event-btn" type='button' value='ליצירת עמוד תרומות' onClick={this.createNewEvent.bind(this)}/>
+                </div>
             </div>
         );
     }
