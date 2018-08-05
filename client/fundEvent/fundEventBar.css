@@ -1,0 +1,22 @@
+.total-donation-bar {
+    position: relative;
+    width: 35px;
+    height: 200px;
+    background: #d8d8d8;
+    border: 1px black solid;
+}
+
+#total-single-donations,
+#total-repeating-donations {
+    position: absolute;
+    width: 100%;
+}
+
+#total-repeating-donations {
+    bottom: 0;
+    background: #07b2ea;
+}
+
+#total-single-donations {
+    background: #8c71d3;
+}

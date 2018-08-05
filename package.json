@@ -15,7 +15,9 @@
     "query-string": "^6.1.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-router": "^4.3.1"
+    "react-router": "^4.3.1",
+    "paypal-checkout": "4.0.209",
+    "react-paypal-express-checkout": "1.0.4"
   },
   "meteor": {
     "mainModule": {

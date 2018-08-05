@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {FundEvents} from '../../imports/api/fundEvents';
 import {withTracker} from 'meteor/react-meteor-data';
+import {PayPalCheckout} from './payPalCheckout';
 
 class MakeDonation extends Component {
     constructor() {
@@ -11,6 +12,7 @@ class MakeDonation extends Component {
         return (
             <div>
                 <p>Donate to {this.props.fundEvent && this.props.fundEvent.name}</p>
+                <PayPalCheckout></PayPalCheckout>
             </div>
         );
     }

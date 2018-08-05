@@ -5,7 +5,7 @@ export default class FundEventHeader extends Component {
     render() {
         return (
             <div className="fundEventHeader">
-                FUND ME
+                FUND ME - {this.props.name}
             </div>
         );
     }

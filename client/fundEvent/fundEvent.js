@@ -16,13 +16,13 @@ class FundEvent extends Component {
         return (
             <div>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
-                <FundEventHeader />
+                <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
                 <br/>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <FundEventBar/>
+                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
                             </td>
                             <td>
                                 <FundEventImage/>
@@ -32,10 +32,15 @@ class FundEvent extends Component {
                 </table>
                 <br/>
                 <FundEventGeneralText />
+                <p>פרטים:</p>
+                <div>{this.props.fundEvent && this.props.fundEvent.eventDescription}</div>
+
+                <p>פרטים על האגודה:</p>
+                <div>{this.props.fundEvent && this.props.fundEvent.associationDescription}</div>
+                <div>{this.props.fundEvent && this.props.fundEvent.phoneNumber}</div>
 
                 <br/>
                 <br/>
-                <p>{this.props.fundEvent && this.props.fundEvent.name}</p>
                 <FundEventDonate/>
             </div>
         );

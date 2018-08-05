@@ -45,57 +45,60 @@ export default class NewFundEvent extends Component {
         return (
             <div>
                 <form className="create-campaign" onSubmit={this.create.bind(this)}>
-                    <label>שם העמותה</label>
-                    <input type="text" ref="name"/>
-                    <br/>
+                    <div class="client-details">
+                        <h3>פרטי עמותה</h3>
+                        <label>שם העמותה</label>
+                        <input type="text" ref="name"/>
+                        <br/>
 
-                    <label>לוגו העמותה</label>
-                    <input type="text" ref="logoUrl"/>
-                    <br/>
+                        <label>לוגו העמותה</label>
+                        <input type="text" ref="logoUrl"/>
+                        <br/>
 
-                    <label>דף הבית</label>
-                    <input type="text" ref="homePage"/>
-                    <br/>
+                        <label>דף הבית</label>
+                        <input type="text" ref="homePage"/>
+                        <br/>
 
-                    <label>מספר עמותה</label>
-                    <input type="text" ref="associationId"/>
-                    <br/>
+                        <label>מספר עמותה</label>
+                        <input type="text" ref="associationId"/>
+                        <br/>
 
-                    <label>טלפון</label>
-                    <input type="text" ref="phone"/>
-                    <br/>
+                        <label>טלפון</label>
+                        <input type="text" ref="phone"/>
+                        <br/>
+                        <label>כתבו משהו...</label>
+                        <textarea name="content" id="editor"></textarea>
+                        <br/>
+                    </div>
+                    <div class="funding-details">
+                        <h3>פרטי תשלום</h3>
+                        <br/>
+                        <label>בנק</label>
+                        <input type="text" ref="bankCode"/>
+                        <br/>
 
-                    <label>כתבו משהו...</label>
-                    <textarea name="content" id="editor"></textarea>
-                    <br/>
+                        <label>מספר סניף</label>
+                        <input type="text" ref="bankBranch"/>
+                        <br/>
 
-                    <label>הזמן פרטי תשלום</label>
-                    <br/>
-                    <label>בנק</label>
-                    <input type="text" ref="bankCode"/>
-                    <br/>
+                        <label>מספר חשבון</label>
+                        <input type="text" ref="bankAccount"/>
+                        <br/>
 
-                    <label>מספר סניף</label>
-                    <input type="text" ref="bankBranch"/>
-                    <br/>
+                        <label>שם בעל החשבון</label>
+                        <input type="text" ref="bankAccountOwner"/>
+                        <br/>
 
-                    <label>מספר חשבון</label>
-                    <input type="text" ref="bankAccount"/>
-                    <br/>
+                        <label>שם משתמש ב-PayPal</label>
+                        <input type="text" ref="payPalEmail"/>
+                        <br/>
 
-                    <label>שם בעל החשבון</label>
-                    <input type="text" ref="bankAccountOwner"/>
-                    <br/>
+                        <label>מספר טלפון (bit)</label>
+                        <input type="text" ref="bitPhone"/>
+                        <br/>
 
-                    <label>שם משתמש ב-PayPal</label>
-                    <input type="text" ref="payPalEmail"/>
-                    <br/>
-
-                    <label>מספר טלפון (bit)</label>
-                    <input type="text" ref="bitPhone"/>
-                    <br/>
-
-                    <input type="submit" value="צור עמוד"/>
+                        <input type="submit" value="צור עמוד"/>
+                    </div>
                 </form>
             </div>
         );
