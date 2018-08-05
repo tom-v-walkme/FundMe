@@ -1,3 +1,4 @@
+/* General */
 @font-face {
   font-family: 'Alef';
   src: url('fonts/Alef-Regular.ttf');
@@ -24,6 +25,72 @@ body {
   margin: 30px auto;
 }
 
+/* Home */ 
+.events-shortcuts-wrapper {
+  width: 960px;
+  margin: 0 auto;
+
+}
+
+.ck-editor__main p {
+  height: 160px;
+}
+
+.fund-event-shortcut {
+    display: inline-block;
+    margin: 0 0 30px 30px;
+}
+
+.fund-event-shortcut:nth-child(3n) {
+  margin-left: 0;
+}
+
+.shortcut-image {
+    display: inline-block;
+}
+
+.shortcut-image .fund-event-image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shortcut-image .fund-event-image img {
+    height: 300px;
+    width: 300px;
+    transition: all 300ms;
+}
+
+.shortcut-image .fund-event-image:hover img {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.shortcut-image .fund-event-image .event-hover-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 25px;
+  box-sizing: border-box;
+  opacity: 0;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  transition: opacity 300ms;
+}
+
+.shortcut-image .fund-event-image:hover .event-hover-panel {
+  opacity: 1;
+}
+
+.create-event-btn {
+    display: block;
+}
+
+/* Create event */
 form {
   width: 860px;
   padding: 30px;
@@ -57,31 +124,10 @@ input[type="text"] {
   border-bottom: 1px solid #222222;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   display: table;
   margin: 20px auto 0;
   font-size: 24px;
 
-}
-
-.ck-editor__main p {
-  height: 160px;
-}
-
-.fund-event-shortcut {
-    display: inline-block;
-}
-
-.shortcut-image {
-    display: inline-block;
-    padding: 20px 20px 20px 20px;
-}
-
-.shortcut-image .fund-event-image img {
-    height: 300px;
-    width: 300px;
-}
-
-.create-event-btn {
-    display: block;
 }
