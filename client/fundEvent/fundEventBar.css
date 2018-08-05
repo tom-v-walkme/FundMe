@@ -7,12 +7,12 @@
 }
 
 #total-single-donations,
-#total-repaeting-donations {
+#total-repeating-donations {
     position: absolute;
     width: 100%;
 }
 
-#total-repaeting-donations {
+#total-repeating-donations {
     bottom: 0;
     background: #07b2ea;
 }
