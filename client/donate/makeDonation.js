@@ -5,6 +5,7 @@ import {PayPalCheckout} from './payPalCheckout';
 import './makeDonation.css';
 import {parse} from "query-string";
 import FundEventHeader from "../shared/fundEventHeader";
+import { ToastContainer } from "react-toastr";
 
 class MakeDonation extends Component {
 
@@ -33,15 +34,21 @@ class MakeDonation extends Component {
             Donations.insert(donation);
         }
 
-        alert('תודה על תרומתכם!');
+        this.container.success(`תודה על תרומתכם!`);
 
-        this.props.history.push('/fundEvent?id=' + this.props.fundEvent._id);
+        setTimeout(() => {
+            this.props.history.push('/fundEvent?id=' + this.props.fundEvent._id);
+        }, 3000);
     };
 
     render() {
         return (
-            <div>
+            <div className>
                 <FundEventHeader/>
+                <ToastContainer
+                    ref={ref => this.container = ref}
+                    className="toast-top-right"
+                />
                 <p>תרומה ל-{this.props.fundEvent && this.props.fundEvent.associationName}</p>
 
                 <div className="donner-details">
