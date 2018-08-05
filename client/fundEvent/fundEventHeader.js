@@ -6,7 +6,8 @@ export default class FundEventHeader extends Component {
     render() {
         return (
             <div className="fundEventHeader">
-                <img src={'./public/images/fundme.svg'} />
+                FundMe
+
             </div>
         );
     }
