@@ -15,18 +15,17 @@ class FundEvent extends Component {
     render() {
         return (
             <div>
-                <FundEventHeader />
-                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <FundEventHeader name={this.props.fundEvent && this.props.fundEvent.associationName}/>
+                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
+                                <FundEventImage/>
                             </td>
                             <td>
-                                <FundEventImage/>
+                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
                             </td>
                         </tr>
                     </tbody>
