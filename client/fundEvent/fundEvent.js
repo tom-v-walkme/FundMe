@@ -6,6 +6,7 @@ import FundEventBar from "./fundEventBar";
 import FundEventImage from "./funcEventImage";
 import FundEventGeneralText from "./fundEventGeneralText";
 import FundEventDonate from "./fundEventDonate";
+import {parse} from 'query-string';
 
 class FundEvent extends Component {
     constructor() {
@@ -43,6 +44,6 @@ class FundEvent extends Component {
 
 export default withTracker(() => {
     return {
-        fundEvent: FundEvents.findOne({_id: 'GLMZHZPEWfmrnmz3p'}),
+        fundEvent: FundEvents.findOne({_id: parse(location.search).id}),
     };
 })(FundEvent);
