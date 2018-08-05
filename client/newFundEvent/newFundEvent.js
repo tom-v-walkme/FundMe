@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import {FundEvents} from '../../imports/api/fundEvents';
+
 export default class NewFundEvent extends Component {
 
     constructor() {
@@ -16,27 +18,25 @@ export default class NewFundEvent extends Component {
         }, 1);
     }
 
-    create() {
-        console.log('created!');
-    }
-
-    getEditorData() {
-        console.log(window.editor.getData());
-    }
-
-    handleImageChange(e) {
+    create(e) {
         e.preventDefault();
 
-        let reader = new FileReader();
-        let file = e.target.files[0];
-
-        reader.onloadend = () => {
-            this.setState({
-                file: file
-            });
+        const fundEvent = {
+            associationId: this.refs.associationId.value,
+            associationName: this.refs.name.value,
+            logoUrl: this.refs.logoUrl.value,
+            homePage: this.refs.homePage.value,
+            phoneNumber: this.refs.phone.value,
+            eventDetails: window.editor.getData(),
+            bankCode: this.refs.bankCode.value,
+            bankBranch: this.refs.bankBranch.value,
+            bankAccount: this.refs.bankAccount.value,
+            bankAccountOwner: this.refs.bankAccountOwner.value,
+            payPalEmail: this.refs.payPalEmail.value,
+            bitPhone: this.refs.bitPhone.value
         };
 
-        reader.readAsDataURL(file)
+        FundEvents.insert(fundEvent);
     }
 
     render() {
@@ -48,7 +48,7 @@ export default class NewFundEvent extends Component {
                     <br/>
 
                     <label>לוגו העמותה</label>
-                    <input className="fileInput" type="file" onChange={(e)=>this.handleImageChange(e)} />
+                    <input type="text" ref="logoUrl"/>
                     <br/>
 
                     <label>דף הבית</label>
@@ -70,7 +70,7 @@ export default class NewFundEvent extends Component {
                     <label>הזמן פרטי תשלום</label>
                     <br/>
                     <label>בנק</label>
-                    <input type="text" ref="bankNumber"/>
+                    <input type="text" ref="bankCode"/>
                     <br/>
 
                     <label>מספר סניף</label>
@@ -86,7 +86,7 @@ export default class NewFundEvent extends Component {
                     <br/>
 
                     <label>שם משתמש ב-PayPal</label>
-                    <input type="text" ref="paypalEmail"/>
+                    <input type="text" ref="payPalEmail"/>
                     <br/>
 
                     <label>מספר טלפון (bit)</label>

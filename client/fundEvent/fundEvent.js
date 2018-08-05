@@ -12,7 +12,7 @@ class FundEvent extends Component {
     render() {
         return (
             <div>
-                <p>{this.props.fundEvent && this.props.fundEvent.name}</p>
+                <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
             </div>
         );
     }
@@ -20,6 +20,6 @@ class FundEvent extends Component {
 
 export default withTracker(() => {
     return {
-        fundEvent: FundEvents.findOne({_id: '1'}),
+        fundEvent: FundEvents.findOne({_id: 'GLMZHZPEWfmrnmz3p'}),
     };
 })(FundEvent);
