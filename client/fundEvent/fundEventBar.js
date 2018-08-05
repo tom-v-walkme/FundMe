@@ -8,12 +8,20 @@ export default class FundEventBar extends Component {
         super();
     }
 
-    componentDidMount() {
+    calcDonations() {
         var repeatingDonationsElement = document.getElementById("total-repeating-donations");
         var singleDonationsElement = document.getElementById("total-single-donations");
 
-        var RepeatingDonationsPercent =  100 * this.props.totalRepeatingDonations / this.props.totalDonation;
-        var singleDonationsPercent =  100 * this.props.totalSingleDonations / this.props.totalDonation;
+        if (!repeatingDonationsElement || !singleDonationsElement) {
+            return;
+        }
+
+        let totalDonation = 500;
+        let totalRepeatingDonations = this.props.donations.reduce((a, c) => a + c.payment, 0);
+        let totalSingleDonations = this.props.donations.reduce((a, c) => a + c.payment, 0);
+
+        var RepeatingDonationsPercent =  100 * totalRepeatingDonations / totalDonation;
+        var singleDonationsPercent =  100 * totalSingleDonations / totalDonation;
 
         repeatingDonationsElement.style.height = RepeatingDonationsPercent + "%";
         singleDonationsElement.style.bottom = RepeatingDonationsPercent + "%";
@@ -21,6 +29,7 @@ export default class FundEventBar extends Component {
     }
 
     render() {
+        this.calcDonations();
         return (
             <div className="donation-bar-wrapper">
                 <div className="total-donation-bar">

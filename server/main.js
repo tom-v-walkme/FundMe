@@ -25,14 +25,14 @@ Meteor.startup(() => {
     }
 
     const donations = Donations.find({}).fetch();
-
     if (!donations || donations.length === 0) {
         Donations.insert({
             firstName: "Amir",
             lastName: "S",
             socialId: 1123,
             payment: 100,
-            fundEventId: "GLMZHZPEWfmrnmz3p"
+            fundEventId: "GLMZHZPEWfmrnmz3p",
+            type: "single"
         });
 
         Donations.insert({
@@ -40,7 +40,8 @@ Meteor.startup(() => {
             lastName: "The Fireman",
             socialId: 1133,
             payment: 20,
-            fundEventId: "GLMZHZPEWfmrnmz3p"
+            fundEventId: "GLMZHZPEWfmrnmz3p",
+            type: "monthly"
         });
 
         Donations.insert({
@@ -48,7 +49,8 @@ Meteor.startup(() => {
             lastName: "Umberla",
             socialId: 1223,
             payment: 30,
-            fundEventId: "GLMZHZPEWfmrnmz3p"
+            fundEventId: "GLMZHZPEWfmrnmz3p",
+            type: "single"
         });
     }
 });
