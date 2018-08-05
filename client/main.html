@@ -5,12 +5,21 @@
 
 <body>
 <textarea name="content" id="editor"></textarea>
+<input type="button" value="Print data in console" onclick="getEditorData();" />
 <script>
+
     ClassicEditor
             .create( document.querySelector( '#editor' ) )
+            .then( newEditor => {
+                window.editor = newEditor;
+            } )
             .catch( error => {
                 console.error( error );
             } );
+
+    function getEditorData() {
+        console.log(window.editor.getData());
+    }
 </script>
     <div id="render-target"></div>
 </body>
