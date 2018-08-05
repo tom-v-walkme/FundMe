@@ -14,15 +14,15 @@ class FundEvent extends Component {
     }
 
     render() {
-        console.log("total donations",this.props.donations && this.props.donations.reduce((a, c) => a + c.payment, 0));
         return (
             <div>
+                <FundEventHeader/>
                 <p>{this.props.fundEvent && this.props.fundEvent.associationName}</p>
                 <br/>
 
-                <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
+                                <FundEventImage url={this.props.fundEvent && this.props.fundEvent.logoUrl}/>
 
-                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
+                                <FundEventBar totalDonation={100000} totalRepeatingDonations={20000} totalSingleDonations={40000}/>
                 <br/>
                 <FundEventGeneralText fundEvent={this.props.fundEvent}/>
                 <br/>
