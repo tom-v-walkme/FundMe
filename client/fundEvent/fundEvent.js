@@ -8,8 +8,6 @@ import FundEventGeneralText from "./fundEventGeneralText";
 import FundEventDonate from "./fundEventDonate";
 
 class FundEvent extends Component {
-    fundEvent;
-
     constructor() {
         super();
     }
