@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class FundEvent extends Component {
+export default class NewFundEvent extends Component {
 
     constructor() {
         super();
