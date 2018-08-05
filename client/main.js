@@ -2,8 +2,8 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 
-import App from '../imports/ui/app.js';
+import NewCampaign from './newCampaign/newCampaign';
 
 Meteor.startup(() => {
-    render(<App />, document.getElementById('render-target'));
+    render(<NewCampaign />, document.getElementById('render-target'));
 });
