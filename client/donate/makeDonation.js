@@ -6,6 +6,8 @@ import './makeDonation.css';
 import {parse} from "query-string";
 import FundEventHeader from "../shared/fundEventHeader";
 import { ToastContainer } from "react-toastr";
+import { BitCheckout } from "./bitCheckout";
+import { PayboxCheckout } from "./payboxCheckout";
 
 class MakeDonation extends Component {
 
@@ -79,7 +81,11 @@ class MakeDonation extends Component {
                         </div>
                     </div>
                     <div className={this.state.amount <= 0 ? "disable-buttons" : ""}>
-                        <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
+                        <div className="paypal-wrapper">
+                            <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
+                        </div>
+                        <BitCheckout></BitCheckout>
+                        <PayboxCheckout></PayboxCheckout>
                     </div>
                 </div>
             </div>
