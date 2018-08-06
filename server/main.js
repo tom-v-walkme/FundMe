@@ -60,6 +60,60 @@ Meteor.startup(() => {
             eventName: "גיוס למען בעלי חיים",
             donationMonthlyGoal: 5500
         });
+
+        FundEvents.insert({
+            _id:"29suDFHs8Dai5M7T7",
+            associationId:"53456457",
+            associationName:"אקים",
+            logoUrl:"http://akim.org.il/~akim13/media/k2/items/cache/f3107c7911141734e4eeaad24ed6c748_XL.jpg",
+            homePage:"http://www.akim.org.il/",
+            phoneNumber:"03-5652121",
+            eventDetails:"<p>תרומות לאקים</p>",
+            bankCode:"12",
+            bankBranch:"557",
+            bankAccount:"7456116",
+            bankAccountOwner:"אקים",
+            payPalEmail:"chaimtoanimals@gmail.com",
+            bitPhone:"03-5652121",
+            eventName: "גיוס למען בעלי מוגבלויות",
+            donationMonthlyGoal: 5500
+        });
+
+        FundEvents.insert({
+            _id:"29suDFHs8Dai5MTT5",
+            associationId:"53456458",
+            associationName:"תנו לחיות לחיות",
+            logoUrl:"http://www.letlive.org.il/wp-content/themes/LetLive/images/logo.png",
+            homePage:"http://www.letlive.org.il/",
+            phoneNumber:"03-35216587",
+            eventDetails:"<p>עמותת תנו לחיות לחיות מגייסת כסף לקניית מלונות חדשות לכלבי העמותה</p>",
+            bankCode:"12",
+            bankBranch:"557",
+            bankAccount:"7456116",
+            bankAccountOwner:"תנו לחיות לחיות",
+            payPalEmail:"chaimtoanimals@gmail.com",
+            bitPhone:"03-5652121",
+            eventName: "מלונה לכל כלב",
+            donationMonthlyGoal: 5500
+        });
+
+        FundEvents.insert({
+            _id:"29suDFHs8Dai5M777",
+            associationId:"53456459",
+            associationName:"לתת תקווה",
+            logoUrl:"https://www.guidestar.org.il//servlet/servlet.FileDownload?file=00P2400000ESTAFEA5",
+            homePage:"https://www.latettikva.co.il/",
+            phoneNumber:"03-38756589",
+            eventDetails:"<p>עמותת לתת תקווה מארגנת טיול שנתי לילדים חולי סרטן</p>",
+            bankCode:"12",
+            bankBranch:"557",
+            bankAccount:"7456116",
+            bankAccountOwner:"לתת תקווה",
+            payPalEmail:"chaimtoanimals@gmail.com",
+            bitPhone:"03-5652121",
+            eventName: "לתת תקווה - טיול שנתי",
+            donationMonthlyGoal: 5500
+        });
     }
 
     const donations = Donations.find({}).fetch();
@@ -106,6 +160,33 @@ Meteor.startup(() => {
             socialId: 1133,
             payment: 2300,
             fundEventId: "29suDFHs8Dai5M6m6",
+            type: "monthly"
+        });
+
+        Donations.insert({
+            firstName: "Alon",
+            lastName: "Levi",
+            socialId: 1133,
+            payment: 5000,
+            fundEventId: "29suDFHs8Dai5M7T7",
+            type: "single"
+        });
+
+        Donations.insert({
+            firstName: "Eli",
+            lastName: "Shmueli",
+            socialId: 1133,
+            payment: 35,
+            fundEventId: "29suDFHs8Dai5MTT5",
+            type: "monthly"
+        });
+
+        Donations.insert({
+            firstName: "Itay",
+            lastName: "Dagan",
+            socialId: 1133,
+            payment: 47.90,
+            fundEventId: "29suDFHs8Dai5M777",
             type: "monthly"
         });
     }
