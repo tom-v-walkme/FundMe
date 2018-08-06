@@ -68,7 +68,7 @@ Meteor.startup(() => {
             logoUrl:"http://akim.org.il/~akim13/media/k2/items/cache/f3107c7911141734e4eeaad24ed6c748_XL.jpg",
             homePage:"http://www.akim.org.il/",
             phoneNumber:"03-5652121",
-            eventDetails:"<p>תרומות לאקים</p>",
+            eventDetails:"<p><strong>לעשות את החברה הישראלית מקום טוב יותר לאנשים עם מוגבלות שכלית ולבני משפחותיהם: חברה מכבדת, חמה ומקבלת, המאפשרת מימוש עצמי, מתוך הכרה בשונות ומחויבות לשוויון הזדמנויות (חזון אקים ישראל).&nbsp;</strong><br>אקים ישראל, הינו ארגון ארצי של הורים ושל אנשים עם מוגבלות שכלית בישראל, הפועל כארגון ממוקד אדם, שמשמעותו ארגון המייצג את האנשים עם מוגבלות שכלית ואת משפחותיהם, תוך שמירה על זכויות האדם וחירותו.</p>",
             bankCode:"12",
             bankBranch:"557",
             bankAccount:"7456116",
@@ -83,10 +83,10 @@ Meteor.startup(() => {
             _id:"29suDFHs8Dai5MTT5",
             associationId:"53456458",
             associationName:"תנו לחיות לחיות",
-            logoUrl:"http://www.letlive.org.il/wp-content/themes/LetLive/images/logo.png",
+            logoUrl:"https://image.modiinapp.com/da8ec31e4515e9d79359f830e08974a0_300_300_crop.jpg",
             homePage:"http://www.letlive.org.il/",
             phoneNumber:"03-35216587",
-            eventDetails:"<p>עמותת תנו לחיות לחיות מגייסת כסף לקניית מלונות חדשות לכלבי העמותה</p>",
+            eventDetails:"<h4> הוקמה בשנת 1986 והינה ארגון שלא למטרות רווח, אשר שם לו למטרה לשפר את ההגנה על בעלי החיים ולקדם את זכויותיהם, ובכלל זה לספק עזרה לבעלי חיים הנתונים במצוקה, לשקמם ולמצוא להם בתים מאמצים.במשך שנות קיומה העלתה העמותה את המודעות הציבורית לחשיבות השמירה על חיי בעלי החיים ומניעת ההתעללות בהם, באמצעות הרחבת חוק צער בעלי חיים ואכיפתו. <strong>העמותה, כחלק מעקרונותיה, אינה ממיתה בעלי חיים ופועלת לצמצום ההמתות של בעלי חיים בריאים.</strong></h4>",
             bankCode:"12",
             bankBranch:"557",
             bankAccount:"7456116",
@@ -104,7 +104,7 @@ Meteor.startup(() => {
             logoUrl:"https://www.guidestar.org.il//servlet/servlet.FileDownload?file=00P2400000ESTAFEA5",
             homePage:"https://www.latettikva.co.il/",
             phoneNumber:"03-38756589",
-            eventDetails:"<p>עמותת לתת תקווה מארגנת טיול שנתי לילדים חולי סרטן</p>",
+            eventDetails:"<h4>אין הרבה מילים שמעבירות צמרמורת כמו המילה <strong>סרטן</strong>.&nbsp;</h4><h4>רבים נמנעים להוציא את המילה המפחידה הזו מהפה. מי שמבקר במחלקות האונקולוגיות בבתי החולים, יבין&nbsp;</h4><h4>אותם.</h4><h4>כבר שנים שמחלת הסרטן מטרידה את האוכלוסייה העולמית: היקפי המחלה, תסמיניה הנוראיים ושיעורי התמותה, מיצבו את הסרטן כאיום הגדול ביותר על המין&nbsp;האנושי בעולם.</h4>",
             bankCode:"12",
             bankBranch:"557",
             bankAccount:"7456116",
@@ -173,6 +173,15 @@ Meteor.startup(() => {
         });
 
         Donations.insert({
+            firstName: "Adina",
+            lastName: "Shalem",
+            socialId: 1133,
+            payment: 9000,
+            fundEventId: "29suDFHs8Dai5M7T7",
+            type: "monthly"
+        });
+
+        Donations.insert({
             firstName: "Eli",
             lastName: "Shmueli",
             socialId: 1133,
@@ -182,10 +191,46 @@ Meteor.startup(() => {
         });
 
         Donations.insert({
+            firstName: "Eden",
+            lastName: "Lavi",
+            socialId: 1133,
+            payment: 1000,
+            fundEventId: "29suDFHs8Dai5MTT5",
+            type: "monthly"
+        });
+
+        Donations.insert({
+            firstName: "Eti",
+            lastName: "Regev",
+            socialId: 1133,
+            payment: 3000,
+            fundEventId: "29suDFHs8Dai5MTT5",
+            type: "monthly"
+        });
+
+        Donations.insert({
             firstName: "Itay",
             lastName: "Dagan",
             socialId: 1133,
             payment: 47.90,
+            fundEventId: "29suDFHs8Dai5M777",
+            type: "monthly"
+        });
+
+        Donations.insert({
+            firstName: "Eliahu",
+            lastName: "gev",
+            socialId: 1133,
+            payment: 8000,
+            fundEventId: "29suDFHs8Dai5M777",
+            type: "single"
+        });
+
+        Donations.insert({
+            firstName: "Michael",
+            lastName: "Cohen",
+            socialId: 1133,
+            payment: 5000,
             fundEventId: "29suDFHs8Dai5M777",
             type: "monthly"
         });

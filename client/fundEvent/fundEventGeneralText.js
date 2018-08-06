@@ -8,7 +8,7 @@ export default class FundEventGeneralText extends Component {
             <div className="tabs fundEventGeneralText">
                 <ul className="nav nav-tabs">
                     <li role="presentation" className="active">
-                        <span data-target="#tab1" data-toggle="tab">אירועים קרובים</span>
+                        <span data-target="#tab1" data-toggle="tab">פרטי האירוע</span>
                     </li>
 
                     <li role="presentation">

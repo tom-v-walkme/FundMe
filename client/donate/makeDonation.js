@@ -84,7 +84,7 @@ class MakeDonation extends Component {
                         <div className="paypal-wrapper">
                             <PayPalCheckout amount={parseInt(this.state.amount)} onSuccessPayment={this.onSuccessPayment.bind(this)}></PayPalCheckout>
                         </div>
-                        <BitCheckout></BitCheckout>
+                        <BitCheckout fundEvent={this.props.fundEvent}></BitCheckout>
                         <PayboxCheckout></PayboxCheckout>
                     </div>
                 </div>
