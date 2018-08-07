@@ -102,9 +102,9 @@ export default class NewFundEvent extends Component {
                         <br/>
 
                     </div>
-
-                    <label>שם האירוע</label>
-                    <input type="text" ref="eventName"/>
+                    <br/>
+                    <label class="event-name">שם האירוע</label>
+                    <input type="text" class="full-width-input" ref="eventName"/>
                     <br/>
 
                     <label>כתבו משהו...</label>
