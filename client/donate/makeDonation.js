@@ -67,7 +67,7 @@ class MakeDonation extends Component {
                         <br/>
                     </div>
                     <div className="donate-type">
-                        <div id="monthly-donate" className={"btn btn-primary" + (this.state.donateType == "monthly" ? " chosen" : "")} onClick={() => this.setState({donateType: "monthly"})}>תרומה חודשית</div>
+                        <div id="monthly-donate" className={"btn btn-primary" + (this.state.donateType == "monthly" ? " chosen" : "")} onClick={() => this.setState({donateType: "monthly"})}>תרומה קבועה</div>
                         <div id="single-donate" className={"btn btn-primary" + (this.state.donateType == "single" ? " chosen" : "")} onClick={() => this.setState({donateType: "single"})}>תרומה חד-פעמית</div>
                     </div>
                     <div className="amount-details">
